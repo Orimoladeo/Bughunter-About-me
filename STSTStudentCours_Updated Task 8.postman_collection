@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "a04d7bd8-637d-4bd7-b03a-7c6cefc7628c",
+		"_postman_id": "255291e6-9dfb-4622-9b3f-67440985904b",
 		"name": "STSTStudentCourse",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "31618946"
@@ -72,7 +72,9 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									""
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -105,6 +107,19 @@
 			"item": [
 				{
 					"name": "Get entry per ID - Valid ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -141,6 +156,19 @@
 				},
 				{
 					"name": "Get entry per ID - Invalid ID(params not using TODO ID)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -178,7 +206,7 @@
 									"});\r",
 									"const response = pm.response.json();\r",
 									"console.log(response[2].id);\r",
-									"pm.environment.set(\"JustMeID\",\"response[2].id\");\r",
+									"pm.environment.set(\"JustMeID\",response[2].id);\r",
 									""
 								],
 								"type": "text/javascript"
@@ -224,7 +252,9 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									""
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -266,7 +296,9 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									""
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -471,7 +503,7 @@
 							"variable": [
 								{
 									"key": "orderId",
-									"value": "ESSfRrHBQ4if3DecRhbW6"
+									"value": "GYKGq5uWHUGUM1ASjpWIT"
 								}
 							]
 						}
@@ -513,7 +545,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"bookId\": 1,\n    \"customerName\": \"Testify Academy\"\n}",
+							"raw": "{\n    \"bookId\": 1,\n    \"customerName\": \"Yemmy Academy\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -594,7 +626,7 @@
 							"variable": [
 								{
 									"key": "orderId",
-									"value": "_ClrQz2yEYF5vmF0DBu-a"
+									"value": "O35cTZeurXMd4JblBKo75"
 								}
 							]
 						}
@@ -610,7 +642,9 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							""
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -651,7 +685,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"clientName\": \"Ibironke\",\n   \"clientEmail\": \"ibironkeyekinni@gmail.com\"\n}",
+					"raw": "{\n   \"clientName\": \"Yemmy\",\n   \"clientEmail\": \"Opeyemi@gmail.com\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -683,6 +717,19 @@
 		},
 		{
 			"name": "Get API Status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
